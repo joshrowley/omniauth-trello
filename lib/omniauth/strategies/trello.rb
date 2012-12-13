@@ -1,4 +1,3 @@
-require "omniauth-trello/version"
 require 'omniauth-oauth'
 require 'multi_json'
 
