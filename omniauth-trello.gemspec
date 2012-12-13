@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Omniauth::Trello::VERSION
   gem.authors       = ["Josh Rowley"]
   gem.email         = ["joshua.f.rowley@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{OAuth 1.0 Strategy for Trello}
+  gem.summary       = %q{OAuth 1.0 Strategy for Trello}
   gem.homepage      = ""
 
   gem.add_runtime_dependency  'omniauth'
