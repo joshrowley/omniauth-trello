@@ -1,6 +1,6 @@
 # Omniauth::Trello
 
-TODO: Write a gem description
+An Omniauth strategy for Trello's OAuth 1.0 authentication. BE WARNED: this is currently in heavy development and should not be used in any production apps.
 
 ## Installation
 
