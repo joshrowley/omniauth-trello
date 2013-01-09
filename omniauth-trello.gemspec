@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["joshua.f.rowley@gmail.com"]
   gem.description   = %q{OAuth 1.0 Strategy for Trello}
   gem.summary       = %q{OAuth 1.0 Strategy for Trello}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/joshrowley/omniauth-trello"
 
   gem.add_runtime_dependency      'omniauth', '~> 1.0'
   gem.add_runtime_dependency      'omniauth-oauth', '~> 1.0'
