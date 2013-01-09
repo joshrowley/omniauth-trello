@@ -1,6 +1,8 @@
 # Omniauth::Trello
 
-An Omniauth strategy for Trello's OAuth 1.0 authentication. BE WARNED: this is currently in heavy development and should not be used in any production apps.
+An Omniauth strategy for Trello's OAuth 1.0 authentication.
+
+Read the [Trello API documentation](https://trello.com/docs/) for more information on obtaining an application key and secret.
 
 ## Installation
 
@@ -18,7 +20,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+`OmniAuth::Strategies::Trello` is a Rack middleware strategy for the OmniAuth gem. Look at the [OmniAuth](https://github.com/intridea/omniauth) project page for more information on how to use OmniAuth.
+
+###Rails Example
+
+Place this into `config/initializers/omniauth.rb`:
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :trello, ENV['TRELLO_KEY'], ENV['TRELLO_SECRET'],
+  app_name: "APP_NAME"
+end
+```
+
+## Known Issues
+
+Any help with these would be appreciated:
+
+* For some user authentications, the raw info returned from Trello has a null value for email
+* The `app_name` authorization is correctly showing up at the Trello authorization page as the `name` parameter per the documentation, however Trello still displays "An Unknown Application"
 
 ## Contributing
 
