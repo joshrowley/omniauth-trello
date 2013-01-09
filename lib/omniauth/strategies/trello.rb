@@ -32,6 +32,12 @@ module OmniAuth
         }
       end
 
+      def request_phase
+        options[:authorize_params] = {
+          :name => options['app_name']
+        }
+      end
+
       def raw_info
         @raw_info ||= MultiJson.decode(access_token.get('/1/members/me').body)
       end
