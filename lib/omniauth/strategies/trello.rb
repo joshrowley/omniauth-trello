@@ -36,6 +36,7 @@ module OmniAuth
         options[:authorize_params] = {
           :name => options['app_name']
         }
+        super
       end
 
       def raw_info
