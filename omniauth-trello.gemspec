@@ -12,9 +12,15 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{OAuth 1.0 Strategy for Trello}
   gem.homepage      = ""
 
-  gem.add_runtime_dependency  'omniauth'
-  gem.add_runtime_dependency  'omniauth-oauth'
-  gem.add_runtime_dependency  'oauth'
+  gem.add_runtime_dependency      'omniauth', '~> 1.0'
+  gem.add_runtime_dependency      'omniauth-oauth', '~> 1.0'
+  gem.add_runtime_dependency      'oauth', '~> 0.4'
+  gem.add_dependency              'multi-json', '~>  1.5'
+  gem.add_development_dependency  'simplecov', '~> 0.7'
+  gem.add_development_dependency  'rspec', '~> 2.12'
+  gem.add_development_dependency  'rack-test'
+  gem.add_development_dependency  'webmock'
+  gem.add_development_dependency  'rake'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
