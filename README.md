@@ -37,8 +37,8 @@ end
 
 Any help with these would be appreciated:
 
-* For some user authentications, the raw info returned from Trello has a null value for email
-* The `app_name` authorization is correctly showing up at the Trello authorization page as the `name` parameter per the documentation, however Trello still displays "An Unknown Application"
+* [#1](https://github.com/joshrowley/omniauth-trello/issues/1): For some user authentications, the raw info returned from Trello has a null value for email
+* [#2](https://github.com/joshrowley/omniauth-trello/issues/2): The `app_name` authorization is correctly showing up at the Trello authorization page as the `name` parameter per the documentation, however Trello still displays "An Unknown Application"
 
 ## Contributing
 
