@@ -29,9 +29,15 @@ Place this into `config/initializers/omniauth.rb`:
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :trello, ENV['TRELLO_KEY'], ENV['TRELLO_SECRET'],
-  app_name: "APP_NAME"
+  app_name: "APP_NAME", scope: 'read,write', expiration: '1day'
 end
 ```
+
+`scope` if omitted, it defaults to "read". Or it can have the value "read,write"
+
+`expiration` if omitted, it defaults to 30 days (Trello default). Or it can have the values: "never", "1day", "30days"
+
+More info in [the Trello docs](https://trello.com/docs/gettingstarted/index.html#getting-a-token-from-a-user)
 
 ## Known Issues
 
