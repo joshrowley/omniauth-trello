@@ -10,7 +10,7 @@ Add this line to your application's Gemfile:
 
     gem 'omniauth-trello'
 
-And then execute:
+And then bundle:
 
     $ bundle
 
@@ -29,22 +29,31 @@ Place this into `config/initializers/omniauth.rb`:
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :trello, ENV['TRELLO_KEY'], ENV['TRELLO_SECRET'],
-  app_name: "APP_NAME", scope: 'read,write', expiration: '1day'
+  app_name: "APP_NAME", scope: 'read,write,account', expiration: 'never'
 end
 ```
 
-`scope` if omitted, it defaults to "read". Or it can have the value "read,write"
+##Scope
 
-`expiration` if omitted, it defaults to 30 days (Trello default). Or it can have the values: "never", "1day", "30days"
+The `scope` argument defaults to 'read'.
+
+Specify other scopes with a comma separated string (no spaces), example: 'read,write,account'
+
+###`read` scope
+* Read all of your boards and organizations
+
+###`write` scope
+* Create and update cards, lists and boards
+* Make comments for you
+
+###`account` scope
+* Read your email address
+
+`expiration` if omitted, it defaults to 30 days (Trello default). You can use arguments like: "never", "1day", "30days"
+
+If you don't specify 'never', Trello will ask for user approval on every subsequent login and application will duplicate on the user's account settings page in Trello. I recommend using the `never` scope.
 
 More info in [the Trello docs](https://trello.com/docs/gettingstarted/index.html#getting-a-token-from-a-user)
-
-## Known Issues
-
-Any help with these would be appreciated:
-
-* [#1](https://github.com/joshrowley/omniauth-trello/issues/1): For some user authentications, the raw info returned from Trello has a null value for email
-* [#2](https://github.com/joshrowley/omniauth-trello/issues/2): The `app_name` authorization is correctly showing up at the Trello authorization page as the `name` parameter per the documentation, however Trello still displays "An Unknown Application"
 
 ## Contributing
 
