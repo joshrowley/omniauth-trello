@@ -49,6 +49,8 @@ Specify other scopes with a comma separated string (no spaces), example: 'read,w
 ###`account` scope
 * Read your email address
 
+Contrary to Trello's documentation, user email is only given when using the `read,write,account` scope.
+
 `expiration` if omitted, it defaults to 30 days (Trello default). You can use arguments like: "never", "1day", "30days"
 
 If you don't specify 'never', Trello will ask for user approval on every subsequent login and application will duplicate on the user's account settings page in Trello. I recommend using the `never` scope.
