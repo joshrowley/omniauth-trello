@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{OAuth 1.0 Strategy for Trello}
   gem.summary       = %q{An OAuth 1.0 Strategy for Trello that abstracts the OAuth flow using the Omniauth gem}
   gem.homepage      = "https://github.com/joshrowley/omniauth-trello"
+  gem.license       = "MIT"
 
   gem.add_runtime_dependency      'omniauth', '~> 1.0'
   gem.add_runtime_dependency      'omniauth-oauth', '~> 1.0'
