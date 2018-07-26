@@ -22,7 +22,7 @@ Or install it yourself as:
 
 `OmniAuth::Strategies::Trello` is a Rack middleware strategy for the OmniAuth gem. Look at the [OmniAuth](https://github.com/intridea/omniauth) project page for more information on how to use OmniAuth.
 
-###Rails Example
+### Rails Example
 
 Place this into `config/initializers/omniauth.rb`:
 
@@ -33,20 +33,20 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-##Scope
+## Scope
 
 The `scope` argument defaults to 'read'.
 
 Specify other scopes with a comma separated string (no spaces), example: 'read,write,account'
 
-###`read` scope
+### `read` scope
 * Read all of your boards and organizations
 
-###`write` scope
+### `write` scope
 * Create and update cards, lists and boards
 * Make comments for you
 
-###`account` scope
+### `account` scope
 * Read your email address
 
 Contrary to Trello's documentation, user email is only given when using the `read,write,account` or `read,account` scope.
