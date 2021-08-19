@@ -13,12 +13,12 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/joshrowley/omniauth-trello"
   gem.license       = "MIT"
 
-  gem.add_runtime_dependency      'omniauth', '~> 1.0'
+  gem.add_runtime_dependency      'omniauth', '~> 2.0'
   gem.add_runtime_dependency      'omniauth-oauth', '~> 1.0'
-  gem.add_runtime_dependency      'oauth', '~> 0.4'
-  gem.add_dependency              'multi_json', '~>  1.5'
-  gem.add_development_dependency  'simplecov', '~> 0.7'
-  gem.add_development_dependency  'rspec', '~> 2.12'
+  gem.add_runtime_dependency      'oauth', '~> 0.5'
+  gem.add_dependency              'multi_json', '~> 1.15'
+  gem.add_development_dependency  'simplecov', '~> 0.21'
+  gem.add_development_dependency  'rspec', '~> 3.0'
   gem.add_development_dependency  'rack-test'
   gem.add_development_dependency  'webmock'
   gem.add_development_dependency  'rake'
